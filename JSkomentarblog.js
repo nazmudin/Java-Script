@@ -1,4 +1,3 @@
-//<![CDATA[
 var disqus_shortname="nazmudin";
 var disqus_url = disqus_blogger_current_url;
 
@@ -24,5 +23,3 @@ var disqus_url = disqus_blogger_current_url;
         (document.getElementsByTagName('head')[0] || document.body).appendChild(dsq);
     }
 })();
-
-//]]>
