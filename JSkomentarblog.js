@@ -1,4 +1,4 @@
-var disqus_shortname="nazmudin";
+var disqus_shortname="USERNAME DISQUS";
 var disqus_url = disqus_blogger_current_url;
 
 (function () {
@@ -23,3 +23,32 @@ var disqus_url = disqus_blogger_current_url;
         (document.getElementsByTagName('head')[0] || document.body).appendChild(dsq);
     }
 })();
+
+!function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||(o=e.createElement(n),o.id=t,o.src="//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");
+
+    var divs = ["disqus-box", "blogger-box", "facebook-box"];
+    var visibleDivId = null;
+    function toggleVisibility(divId) {
+      if(visibleDivId === divId) {
+        visibleDivId = null;
+      } else {
+        visibleDivId = divId;
+      }
+      hideNonVisibleDivs();
+    }
+    function hideNonVisibleDivs() {
+      var i, divId, div;
+      for(i = 0; i < divs.length; i++) {
+        divId = divs[i];
+        div = document.getElementById(divId);
+        if(visibleDivId === divId) {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
+    }
+
+$(".commentbtn").click(function (e) {
+$(this).addClass("btncurrent").siblings().removeClass("btncurrent");
+});
